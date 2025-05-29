@@ -1,0 +1,10 @@
+---
+- name: Install htop system monitor tool
+  hosts: local
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: Install htop package
+      ansible.builtin.package:
+        name: htop
+        state: present
